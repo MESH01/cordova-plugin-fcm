@@ -20,7 +20,7 @@ var config = fs.readFileSync('config.xml').toString();
 var name = getValue(config, 'name');
 
 var IOS_DIR = 'platforms/ios';
-var ANDROID_DIR = 'platforms/android';
+var ANDROID_DIR = 'platforms/android/app';
 
 var PLATFORM = {
     IOS: {
@@ -43,7 +43,7 @@ var PLATFORM = {
             ANDROID_DIR + '/assets/www/google-services.json',
             'www/google-services.json'
         ],
-        stringsXml: ANDROID_DIR + '/res/values/strings.xml'
+        stringsXml: ANDROID_DIR + '/src/main/res/values/strings.xml'
     }
 };
 
