@@ -21,6 +21,12 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     private static final String TAG = "FCMPlugin";
 
+    @Override
+    public void onNewToken(String s) {
+        super.onNewToken(s);
+        Log.d("==> MyFirebaseMessagingService onNewToken", s);
+    }
+
     /**
      * Called when message is received.
      *

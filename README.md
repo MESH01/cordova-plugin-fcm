@@ -3,6 +3,10 @@
 
 >[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VF654BMGUPQTJ)
 
+#### Version 2.1.5 (06/20/2019)
+- Removed MyFirebaseInstanceIDService class due to parent deprecation
+- Added new sdk function: onNewToken
+
 #### Version 2.1.2 (03/06/2017)
 - Tested on Android and iOS using Cordova cli 6.4.0, Cordova android 6.0.0 and Cordova ios 4.3.1
 - Available sdk functions: onTokenRefresh, getToken, subscribeToTopic, unsubscribeFromTopic and onNotification
