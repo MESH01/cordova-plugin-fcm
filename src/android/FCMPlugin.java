@@ -13,7 +13,7 @@ import org.json.JSONObject;
 import android.os.Bundle;
 
 import com.google.firebase.messaging.FirebaseMessaging;
-import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.android.gms.tasks.Task;
 
 import java.util.Map;
 
@@ -52,8 +52,8 @@ public class FCMPlugin extends CordovaPlugin {
 				cordova.getActivity().runOnUiThread(new Runnable() {
 					public void run() {
 						try{
-							String token = FirebaseInstanceId.getInstance().getToken();
-							callbackContext.success( FirebaseInstanceId.getInstance().getToken() );
+							Task<String> token = FirebaseMessaging.getInstance().getToken();
+							callbackContext.success( FirebaseMessaging.getInstance().getToken().toString() );
 							Log.d(TAG,"\tToken: "+ token);
 						}catch(Exception e){
 							Log.d(TAG,"\tError retrieving token");
